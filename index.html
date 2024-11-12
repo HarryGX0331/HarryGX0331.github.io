@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xiuhong Xu - Personal Page</title>
+    <style>
+      /* Global styles */
+      body, html {
+          margin: 0;
+          padding: 0;
+          overflow-x: hidden;
+          font-family: Arial, sans-serif;
+      }
+
+      /* Full-screen background section */
+      .hero-section {
+          background-image: url('DSC_5693.jpg'); /* Replace with your image path */
+          background-size: cover;
+          background-position: center;
+          height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          color: #fff;
+          text-align: center;
+          position: relative;
+      }
+
+      .hero-section h1 {
+          font-size: 3rem;
+          font-weight: bold;
+          color: #f0f0f0;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+          margin: 0;
+          padding: 0;
+      }
+
+      /* Scroll button style */
+      .scroll-button {
+          position: absolute;
+          bottom: 20px;
+          left: 50%;
+          transform: translateX(-50%);
+          font-size: 2rem;
+          color: #fff;
+          cursor: pointer;
+      }
+
+      /* Navbar styles */
+      .navbar {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #fff;
+          padding: 15px 0;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          position: relative;
+          width: 100%;
+          z-index: 10;
+          transition: all 0.3s ease-in-out;
+      }
+
+      .navbar.fixed {
+          position: fixed;
+          top: 0;
+      }
+
+      .navbar a {
+          color: #333;
+          margin: 0 15px;
+          text-decoration: none;
+          font-weight: bold;
+          font-size: 1rem;
+          transition: color 0.3s;
+      }
+
+      .navbar a:hover {
+          color: #555;
+      }
+
+      /* Main content layout */
+      .content {
+          display: flex;
+          align-items: stretch;
+          justify-content: space-between;
+          width: 100%;
+          max-width: 1200px;
+          margin: 50px auto;
+          color: #312f2f;
+      }
+
+      /* Left section */
+      .intro-section {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-right: 30px;
+      }
+
+      /* Right section for image and CV button */
+      .profile-section {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+      }
+
+      .profile-image img {
+          width: 250px;
+          height: 250px;
+          object-fit: cover;
+          border-radius: 10px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* CV button style */
+      .cv-button {
+          display: inline-block;
+          padding: 10px 20px;
+          background-color: #b799ff;
+          color: #000;
+          border-radius: 20px;
+          text-decoration: none;
+          font-weight: bold;
+          margin-top: 10px;
+          transition: background-color 0.3s ease;
+      }
+
+      .cv-button:hover {
+          background-color: #9f5cff;
+      }
+
+      /* Section styles */
+      .section {
+          max-width: 800px;
+          margin: 0 auto 50px;
+          padding: 20px;
+          background: rgba(255, 255, 255, 0.8);
+          border-radius: 8px;
+      }
+
+      h1.name-title, h2, h3 {
+          color: #312f2f;
+          margin-bottom: 15px;
+      }
+
+      h1.name-title {
+          font-size: 2.5rem;
+      }
+
+      h2 {
+          font-size: 1.8rem;
+      }
+
+      h3 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-top: 20px;
+          margin-left: 20px; /* Indent h3 */
+      }
+
+      .intro-text, p {
+          color: #312f2f;
+          font-size: 1.2rem;
+          line-height: 1.6;
+      }
+
+      p.experience-description {
+          margin-left: 20px; /* Match indent with h3 */
+          color: #312f2f;
+          font-size: 1.2rem;
+          line-height: 1.6;
+      }
+      /* Footer styles */
+      .footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+          position: relative;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
+</head>
+<body>
+
+    <!-- Full-screen background section -->
+    <div class="hero-section">
+        <h1>Xiuhong Xu's Personal Homepage</h1>
+        <div class="scroll-button" onclick="scrollToContent()">&#8595;</div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#welcome">Welcome</a>
+        <a href="#education">Education</a>
+        <a href="#interests">Research Interests</a>
+        <a href="#experience">Research Experience</a>
+        <a href="#talks">Selected Talks</a>
+        <a href="#teaching">Teaching</a>
+    </div>
+
+    <!-- Main content section -->
+    <div class="content" id="welcome">
+        <div class="intro-section">
+            <h1 class="name-title">Xiuhong Xu</h1>
+            <p class="intro-text">My name is Xiuhong Xu, an enthusiastic student and researcher with a profound interest in physics. I hold a Bachelor of Science degree in Physics from the University of Science and Technology of China and am currently pursuing a Master of Science in Physics at Brown University. I aspire to pursue a PhD in Physics in the upcoming 2025 cycle.</p>
+        </div>
+        <div class="profile-section">
+            <div class="profile-image">
+                <img src="IMG_9305.JPG" alt="Xiuhong Xu">
+            </div>
+            <a href="Curriculum Vitae.pdf" class="cv-button" target="_blank">Get CV</a>
+        </div>
+    </div>
+
+    <!-- Education section -->
+    <div class="section" id="education">
+        <h2>Education</h2>
+        <p><strong>Master of Science in Physics</strong>, Brown University, Providence, RI (Expected May 2025)</p>
+        <p><strong>Bachelor of Natural Science in Physics</strong>, University of Science and Technology of China, Hefei, Anhui, 2023</p>
+    </div>
+
+    <!-- Research Interests section -->
+    <div class="section" id="interests">
+        <h2>Research Interests</h2>
+        <ul>
+            <li style="font-size: 1.2rem; color: #312f2f;">Topological in Physics Systems</li>
+            <li style="font-size: 1.2rem; color: #312f2f;">Superfluids and Quantum Phase Transitions</li>
+            <li style="font-size: 1.2rem; color: #312f2f;">Soft Matter Physics</li>
+            
+            
+        </ul>
+    </div>
+
+    <!-- Research Experience section -->
+    <div class="section" id="experience">
+        <h2>Research Experience (2019-2024)</h2>
+        <div class="experience-item">
+            <h3>Simulation of Topological Gaseous Plasmon Polaritons at the Large Plasma Device</h3>
+            
+            <p class="experience-description">Conducted 3D simulations of Gaseous Plasmon Polaritons in cold plasma under a magnetic field to observe one-directional wave behavior aligned with LAPD experiments.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+            <h3>Negative Compressibility in Spring Networks of Amorphous Solids</h3>
+            
+            <p class="experience-description">Investigated stress–strain behavior and negative compressibility in disordered jammed states using molecular dynamics simulations.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+            <h3>Validation of Spin-dependent Displacement in the Spin Hall Effect of Light</h3>
+            
+            <p class="experience-description">Verified spin-dependent displacement of photons in the spin Hall effect of light through customized optical circuits and displacement measurements.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+            <h3>Laboratory Practice in Quantum Computing Laboratory of USTC</h3>
+            
+            <p class="experience-description">Participated in experimental setups, optical circuit construction, and literature review to gain foundational experience in quantum computing lab work.</p>
+        </div>
+        <hr>
+        <div class="experience-item">
+            <h3>Exploration of Influencing Factors on Throwing Paper Airplanes</h3>
+            
+            <p class="experience-description">Conducted experiments on paper airplane flight dynamics, analyzing variables like launch angle and aspect ratio to optimize design and performance.</p>
+        </div>
+    </div>
+
+    <!-- Selected Talks section -->
+    <div class="section" id="talks">
+        <h2>Selected Talks</h2>
+        <ul>
+            <li style="font-size: 1.2rem; color: #312f2f;">"Simulation of Topological Gaseous Plasmon Polaritons at the Large Plasma Device" - <strong>Annual Meeting of the APS Division of Plasma Physics 2024</strong>, Atlanta, Georgia, Speaker, 10/2024</li>
+        </ul>
+    </div>
+
+    <!-- Teaching section -->
+    <div class="section" id="teaching">
+        <h2>Teaching</h2>
+        <p><strong>Grader</strong>, Brown University, RI</p>
+        <ul>
+            <li style="font-size: 1.2rem; color: #312f2f;">PHYSICS 1170/2170 – Introduction to Nuclear and High Energy Physics, Spring 2024</li>
+        </ul>
+    </div>
+    <!-- Contact Info section -->
+    <div class="footer">
+      <p style=" color: #ffffff;">Contact Info:<br>
+      401-230-4500<br>
+      harrygxxh@gmail.com</p>
+    </div>
+   
+
+    <!-- JavaScript for smooth scroll effect -->
+    <script>
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            if (window.scrollY > navbar.offsetTop) {
+                navbar.classList.add('fixed');
+            } else {
+                navbar.classList.remove('fixed');
+            }
+        });
+
+        function scrollToContent() {
+            document.getElementById('welcome').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
